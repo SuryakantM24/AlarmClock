@@ -1,10 +1,10 @@
-/* Universal styles */
+/* Universal Selector */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
-  }
+}
   
 /* Gradient Background */
   body {
@@ -40,7 +40,7 @@
     font-size: 3rem;
   }
   
-  /* Input Time Div */
+  /* Input Time Div for positioning */
   .inputs {
     display: flex;
     flex-wrap: wrap; /* Allow items to wrap in smaller screens */
@@ -139,16 +139,10 @@
   cursor:pointer;
 }
 
-
-
-
-  
   /* Media Query for Smaller Screens */
   @media (max-width: 768px) {
     .wrapper {
-      width: 90%; /* Adjust width for smaller screens */
+      width: 90%;
     }
-  
-    /* Adjust other styles as needed for smaller screens */
   }
  

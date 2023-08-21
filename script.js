@@ -14,7 +14,6 @@ function ring() {
     audio.play();
     ringTimeout = setTimeout(() => {
         stopAlarm(); // Manually stop the alarm if it's not already stopped
-        alert("Alarm turned off after 60 seconds.");
     }, 60000); // 60 seconds
 }
 
