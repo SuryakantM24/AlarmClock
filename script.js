@@ -8,15 +8,6 @@ const addAlarm = document.getElementById('btn1');
 const allAlarms = []; // Stores all the alarms being set
 
 
-let ringTimeout;
-
-function ring() {
-    audio.play();
-    ringTimeout = setTimeout(() => {
-        stopAlarm(); // Manually stop the alarm if it's not already stopped
-    }, 60000); // 60 seconds
-}
-
 
 
 
@@ -64,13 +55,34 @@ function formatTime(time) {
 
 //Stopping the Alaram
 
-let Timeout = null;
+// let Timeout = null;
+// function stopAlarm() {
+//     audio.pause();
+//     if (Timeout) {
+//     clearTimeout(Timeout);
+//     }
+   
+// }
+
+let ringTimeout;
+let isManuallyStopped = false;
+
+function ring() {
+    audio.play();
+    ringTimeout = setTimeout(() => {
+        if (!isManuallyStopped) {
+            stopAlarm(); // Manually stop the alarm if it's not already stopped
+            alert("Alarm turned off after 60 seconds.");
+        }
+    }, 60000); // 60 seconds
+}
+
 function stopAlarm() {
     audio.pause();
-    if (Timeout) {
-    clearTimeout(Timeout);
+    isManuallyStopped = true; // Set the flag when the alarm is manually stopped
+    if (ringTimeout) {
+        clearTimeout(ringTimeout);
     }
-   
 }
 
 
