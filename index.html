@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alaram Clock</title>
+    
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="./Assets/alarm-clock-2.png">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Sarabun&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@500&display=swap" rel="stylesheet">
+
+     <!-- Font Awesome Icons -->
+     <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+     />
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!-- Background Image -->
+    <img id="immg" src="./Assets/alarm-clock.jpg" alt="">
+    <!-- Main Container -->
+    <div class="wrapper">
+
+            <!-- Time display -->
+           <div>
+             <h1 class="timer">00:00:00</h1>
+           </div>
+
+           <!-- Hour , Min, Sec Inputs -->
+           <div class="inputs">
+             <input type="number" id="hour" placeholder="HH" min="0" max="23" >
+             <input type="number" id="min" placeholder="MM" min="0" max="59" >
+             <input type="number" id="sec" placeholder="SS" min="0" max="59"  >
+             <select id="ampm">
+              <option value="AM">AM</option>
+              <option value="PM">PM</option>
+             </select>
+           </div>
+         <!-- Buttons to add and Pause alarm -->
+          <div class="buttons">
+            <button class="btn"id="btn1" type="submit">
+                Add Alaram
+            </button> 
+          </div>
+          <div class="buttons" >
+            <button class="btn" onclick="stopAlarm()" id="btn2" type="reset">
+               Pause
+            </button>
+          </div>
+          <!-- Heading of Upcoming Alaram List -->
+          <div id="heading">Upcoming Alarms</div>
+          <!-- Upcoming alarms List -->
+          <div class="upcoming">
+             <ul class="list">
+                  
+             </ul>
+            </div>    
+      
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
