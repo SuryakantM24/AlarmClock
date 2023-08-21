@@ -32,7 +32,7 @@ A simple alarm clock web application that allows users to create and manage mult
 
 Contributions to improve this alarm clock app are welcome! If you find any bugs or want to add new features, feel free to create an issue or submit a pull request.
 
-
+## Note :- Use Crome Browser for Better Experience.
 
 ---
 
