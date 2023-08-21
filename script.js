@@ -163,5 +163,5 @@ function isValidTime(hour, minute, second, ampm) {
 
 
 
-// Calls updateTime() every second
+// Calls Timer() every second
 setInterval(Timer, 1000);
